@@ -1,0 +1,14 @@
+---
+- import_tasks: find.yml
+
+- name: remove any existing installations
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ installations.files }}"
+
+- name: remove symlink
+  file:
+    src: "{{ installations.files[0].path }}"
+    dest: "{{ ec2_api_tools_dir }}"
+    state: absent

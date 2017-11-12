@@ -1,0 +1,4 @@
+---
+ec2_api_tools_url: http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip
+ec2_api_tools_dir: "/opt/ec2-api-tools"
+ec2_api_tools_refresh: no

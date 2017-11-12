@@ -1,0 +1,7 @@
+---
+- name: find existing installations
+  find:
+    paths: "{{ ec2_api_tools_dir | dirname }}"
+    patterns: '{{ ec2_api_tools_dir | basename }}-*'
+    file_type: directory
+  register: installations

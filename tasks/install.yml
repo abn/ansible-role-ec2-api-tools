@@ -1,0 +1,27 @@
+---
+- name: install system dependencies
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - unzip
+    - "{{ {'Debian': 'default-jre', 'Alpine': 'openjdk8'}[ansible_os_family] | default('java-headless') }}"
+
+- name: download and install
+  unarchive:
+    src: "{{ ec2_api_tools_url }}"
+    dest: "{{ ec2_api_tools_dir | dirname }}"
+    remote_src: yes
+
+- import_tasks: find.yml
+
+- name: ensure installation was successful
+  fail:
+    msg: Could not find any installations
+  when: installations.files | length == 0
+
+- name: create symlink to latest
+  file:
+    src: "{{ installations.files[0].path }}"
+    dest: "{{ ec2_api_tools_dir }}"
+    state: link

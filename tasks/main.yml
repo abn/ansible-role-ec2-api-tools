@@ -1,0 +1,11 @@
+---
+- name: check for current installation
+  stat:
+    path: "{{ ec2_api_tools_dir }}"
+  register: current_installation
+
+- import_tasks: clean.yml
+  when: current_installation.stat.exists and ec2_api_tools_refresh
+
+- import_tasks: install.yml
+  when: not current_installation.stat.exists or ec2_api_tools_refresh
