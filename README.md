@@ -1,5 +1,6 @@
 EC2 API Tools (Java)
 ====================
+[![Build Status](https://travis-ci.org/abn/ansible-role-ec2-api-tools-java.svg?branch=master)](https://travis-ci.org/abn/ansible-role-ec2-api-tools-java) [![Ansible Role](https://img.shields.io/ansible/role/21887.svg)](https://galaxy.ansible.com/abn/managed-node-bootstrap/)
 
 Install and configure AWS ec2-api-tools on a target node. This does not use the newer (recommended) python package `awscli` as this was purpose built for use cases that still use the java tools (eg: [Bamboo Elastic Agent](https://confluence.atlassian.com/bamboo/creating-a-custom-elastic-image-289277146.html)).
 
