@@ -2,4 +2,4 @@
 - name: converge
   hosts: all
   roles:
-    - ansible-role-ec2-api-tools
+    - ansible-role-ec2-api-tools-java
