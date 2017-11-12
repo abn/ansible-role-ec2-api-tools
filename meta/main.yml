@@ -3,7 +3,7 @@ dependencies: []
 galaxy_info:
   author: "Arun Neelicattu"
   description: "Install and configure AWS ec2-api-tools on a target node"
-  issue_tracker_url: https://github.com/abn/ansible-role-ec2-api-tools/issues
+  issue_tracker_url: https://github.com/abn/ansible-role-ec2-api-tools-java/issues
   license: Apache
   min_ansible_version: 2.0
   platforms:
