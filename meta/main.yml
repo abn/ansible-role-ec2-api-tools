@@ -12,3 +12,4 @@ galaxy_info:
     - name: Fedora
   galaxy_tags:
     - aws:ec2:api:tools
+    - java
