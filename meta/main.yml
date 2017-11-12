@@ -5,7 +5,7 @@ galaxy_info:
   description: "Install and configure AWS ec2-api-tools on a target node"
   issue_tracker_url: https://github.com/abn/ansible-role-ec2-api-tools-java/issues
   license: Apache
-  min_ansible_version: 2.0
+  min_ansible_version: 2.4
   platforms:
     - name: Debian
     - name: EL
